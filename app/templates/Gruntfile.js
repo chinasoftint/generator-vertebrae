@@ -1,3 +1,5 @@
+// Generated on <%= (new Date).toISOString().split('T')[0] %> using <%= pkg.name %> <%= pkg.version %>
+
 module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -64,7 +66,7 @@ module.exports = function(grunt) {
                 autoWatch: true,
                 browsers: ['PhantomJS'],
                 //configFile: 'karma.conf.js',
-            
+
               options: {
                 frameworks: ['jasmine', 'requirejs'],
 
@@ -73,7 +75,7 @@ module.exports = function(grunt) {
                     "assets/js/libs/bower_components/zepto/zepto.min.js",
                     "assets/js/libs/bower_components/backbone/backbone-min.js",
                     "assets/js/libs/bower_components/handlebars/handlebars.js",
-                    // the included: false is mandatory in order to be loaded with requirejs; ignoring this causes the scripts to be loaded in 
+                    // the included: false is mandatory in order to be loaded with requirejs; ignoring this causes the scripts to be loaded in
                     // phantom, which causes requirejs to fail as the scripts have all ready been processed.
                     {pattern: "assets/js/app/**/*.js", included: false},
                     {pattern: "assets/js/test/**/*.js", included: false},
@@ -92,7 +94,7 @@ module.exports = function(grunt) {
             compile: {
                 // see full list of options here: https://github.com/jrburke/r.js/blob/master/build/example.build.js
                 options: {
-                    
+
                     baseUrl: "./assets/js/",
                     mainConfigFile: "./assets/js/init.js",
                     name: "init",
@@ -101,7 +103,7 @@ module.exports = function(grunt) {
             }
         }
       });
-    
+
     // there are methods to auto-load all load each package one by one
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-handlebars');

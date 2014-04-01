@@ -26,14 +26,27 @@ var VertebraeGenerator = yeoman.generators.Base.extend({
     this.log(chalk.magenta('You\'re using the fantastic Vertebrae generator.'));
 
     var prompts = [{
-      type: 'confirm',
-      name: 'someOption',
-      message: 'Would you like to enable this option?',
-      default: true
+      name: 'appName',
+      message: 'What would you like to name this app?'
+    }, {
+      name: 'appDescription',
+      message: 'Briefly describe the app.',
+      default: ''
+    }, {
+      name: 'authorName',
+      message: 'What is your name?',
+      default: 'Steve Pember'
+    }, {
+      name: 'authorEmail',
+      message: 'What is your email address?',
+      default: 'spember@gmail.com'
     }];
 
     this.prompt(prompts, function (props) {
-      this.someOption = props.someOption;
+      this.appName = props.appName;
+      this.appDescription = props.appDescription;
+      this.authorName = props.authorName;
+      this.authorEmail = props.authorEmail;
 
       done();
     }.bind(this));
@@ -43,8 +56,9 @@ var VertebraeGenerator = yeoman.generators.Base.extend({
     this.mkdir('app');
     this.mkdir('app/templates');
 
-    this.copy('_package.json', 'package.json');
-    this.copy('_bower.json', 'bower.json');
+    this.template('_package.json', 'package.json');
+    this.template('_bower.json', 'bower.json');
+    this.template('_index.html', 'index.html');
   },
 
   projectfiles: function () {
