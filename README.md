@@ -1,6 +1,6 @@
 # Vertebrae Generator
 
-Yeoman generator based around Backbone and RequireJS.
+Yeoman generator based around Backbone and RequireJS. (Based on [Backbone-Vertebrae](https://github.com/spember/backbone-vertebrae) by spember)
 
 [Yeoman](http://yeoman.io) generator that scaffolds out a front-end web app.
 

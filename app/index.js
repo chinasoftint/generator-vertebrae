@@ -34,12 +34,10 @@ var VertebraeGenerator = yeoman.generators.Base.extend({
       default: ''
     }, {
       name: 'authorName',
-      message: 'What is your name?',
-      default: 'Steve Pember'
+      message: 'What is your name?'
     }, {
       name: 'authorEmail',
-      message: 'What is your email address?',
-      default: 'spember@gmail.com'
+      message: 'What is your email address?'
     }, {
       type: 'list',
       name: 'jsLibrary',
