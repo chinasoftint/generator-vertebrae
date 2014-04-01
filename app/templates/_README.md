@@ -33,13 +33,7 @@ In addition, __index.html__ gives an example of how to include the libraries to 
 
 ### Getting Started & Development
 
-1.    Ensure you have [NodeJS][node] (including [NPM](https://npmjs.org/)), [Grunt][grunt], [Bower][bower] and [Sass][sass] installed. Refer to their "getting started" guides to install
-1.    Navigate to the project folder, obviously
-1.    Configure the project to fit your environment / requirements: Update init.js, init.js, and Gruntfile.js to reflect your chosen project structure if different from this
-1.    Install the development dependencies by running: ```npm install``` (Note: I sometimes have to execute this twice for new enivronments)
-1.    Install the production dependencies by running: ```bower install``` (Note: update the .bowerrc file to change the bower installation path)
-
-At this point you'll be able to proceed with development. The goal is to keep your code as modular as possible: construct your code in the [AMD][amd] format and rely on [Require][require] to handle module loading.
+Once the project is set up, you'll be able to proceed with development. The goal is to keep your code as modular as possible: construct your code in the [AMD][amd] format and rely on [Require][require] to handle module loading.
 For example, consider the following View:
 
 ```javascript

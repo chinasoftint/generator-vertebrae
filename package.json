@@ -1,13 +1,13 @@
 {
   "name": "generator-vertebrae",
-  "version": "0.0.0",
-  "description": "Yeoman generator",
+  "version": "0.1.0",
+  "description": "Yeoman generator for Backbone and RequireJS",
   "license": "MIT",
   "main": "app/index.js",
   "repository": "conorsheehan/generator-vertebrae",
   "author": {
-    "name": "",
-    "email": "",
+    "name": "Conor Sheehan",
+    "email": "conor@cantina.co",
     "url": "https://github.com/conorsheehan"
   },
   "engines": {
@@ -20,7 +20,9 @@
     "app"
   ],
   "keywords": [
-    "yeoman-generator"
+    "yeoman-generator",
+    "backbone",
+    "requirejs"
   ],
   "dependencies": {
     "yeoman-generator": "~0.16.0",
