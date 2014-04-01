@@ -1,6 +1,6 @@
-# Backbone Vertebrae
+# <%= appName %>
 
-This goal of this project is to create a basic skeleton / structure for Single Page Web Applications. It's meant to act as a guide / suggestion for building a Front End Javascript application. Vertebrae is a culmination of working on several applications over the past year. I've found this structure to be very useful, and I hope you will too.
+<%= appDescription %>
 
 ### Technologies
 
@@ -16,7 +16,7 @@ I've incorporated the following technologies into the structure which I consider
 Additionally, for development/deployment purposes Vertabrae also includes:
 
 *	[NodeJS][nodejs]: The __only__ way to run your server-side JS. Required by several build tools (e.g. [Grunt][grunt])
-*	[Grunt][grunt]: Fantastic JS-based Task Runner. Used to drive just about everything: tests, handlebars 
+*	[Grunt][grunt]: Fantastic JS-based Task Runner. Used to drive just about everything: tests, handlebars
 *	[Karma][karma]: Used to be called 'Testacular'. A JS Test runner that can execute your tests in multiple browsers simultaneously, or go headless via PhantomJS and run in the background
 *	[Jasmine][jasmine]: BDD JS testing
 *	[Bower][bower]: Package Manager; use to download libraries rather than check into source code
@@ -46,13 +46,13 @@ For example, consider the following View:
 
 	// inject the needed modules
 	define(["templates", "backbone"], function(templates, Backbone) {
-		// because they're loaded asynchronously, we cannot guarantee they'll be 
+		// because they're loaded asynchronously, we cannot guarantee they'll be
 		// ready until the return object is parsed
 		return Backbone.View.extend({
-			// it's minor, but by injecting the templates object we do not have 
+			// it's minor, but by injecting the templates object we do not have
 			// to worry about the namespace structure
 
-			template: templates.index, 
+			template: templates.index,
 			className: "content",
 			render: function() {
 				this.$el.append(this.template());
@@ -82,12 +82,12 @@ All tests should be written as an [AMD][amd] module with [Jasmine][jasmine] synt
 *	```grunt sass```: process the .scss files into ```assets/css/style.css```
 *	```grunt jshint```: run jsHint through all specified files
 *	```grunt requirejs```: compile the source JS files into one file, ```assets/js/compiled-app.js```
-*	```grunt karma```: execute the unit tests. By default this uses PhantomJS, and will watch your js files continously. Any change will re-run all tests	
+*	```grunt karma```: execute the unit tests. By default this uses PhantomJS, and will watch your js files continously. Any change will re-run all tests
 *	```grunt```: the default task will perform ``grunt jshint`` and ``grunt karma``
 
 and finally:
 
-*	```grunt watch```: this will run a continuous process which watches the .scss and .hbs files, then processes them appropriately if anything changes. 
+*	```grunt watch```: this will run a continuous process which watches the .scss and .hbs files, then processes them appropriately if anything changes.
 
 I highly recommend having two terminals open during development, one dedicated to ```grunt watch``` and the other to ``grunt karma```. This will alert you immediately of any broken tests, and will automatically refresh your css and templates without you worrying about it after every change.
 
@@ -102,13 +102,13 @@ Currently, each task only creates one .css and one .js file, but this could be e
 
 #### Using compiled-app.js
 
-The ```grunt requirejs``` task creates a compiled version at ```assets/js/compiled-app.js```. The test index.html file loads RequireJS, then loads ```assets/js/init.js```, the main configuration / initialization file. 
+The ```grunt requirejs``` task creates a compiled version at ```assets/js/compiled-app.js```. The test index.html file loads RequireJS, then loads ```assets/js/init.js```, the main configuration / initialization file.
 In order to use the concatenated & minifed version, one must tell Require to load it instead. This is done by editing __index.html__ and replacing:
 
 
 ```<script type="text/javascript" src="/assets/js/libs/bower_components/requirejs/require.js" data-main="/assets/js/init"></script>```
 
-with 
+with
 
 ```<script type="text/javascript" src="/assets/js/libs/bower_components/requirejs/require.js" data-main="/assets/js/compiled-app"></script>```
 
@@ -118,7 +118,7 @@ with
 The compiled CSS and JS files are placed directly in the assets/css and assets/js folders, intermingled with the src code. This could perhaps be separated out into dedicated ```src``` folders for the SCSS and non-compiled JS code.
 
 
-[zepto]: http://zeptojs.com/ 
+[zepto]: http://zeptojs.com/
 [underscore]: http://underscorejs.org/ "Underscore.js"
 [backbone]: http://backbonejs.org/  "Backbone.js"
 [handlebars]: http://handlebarsjs.com/ "Handlebars"
@@ -130,4 +130,3 @@ The compiled CSS and JS files are placed directly in the assets/css and assets/j
 [bower]: http://bower.io/ "Bower"
 [sass]: http://sass-lang.com/ "Sass"
 [amd]: http://requirejs.org/docs/whyamd.html "Why AMD?"
-

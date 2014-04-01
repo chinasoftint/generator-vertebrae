@@ -45,3 +45,8 @@ If you'd like to get to know Yeoman better and meet some of his friends, [Grunt]
 ## License
 
 MIT
+
+## TODO
+
+* Optionally install stuff (e.g. font awesome)
+* Optionally install jquery

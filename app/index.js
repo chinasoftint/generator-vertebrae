@@ -58,12 +58,18 @@ var VertebraeGenerator = yeoman.generators.Base.extend({
 
     this.template('_package.json', 'package.json');
     this.template('_bower.json', 'bower.json');
+    this.template('_Gruntfile.js', 'Gruntfile.js');
     this.template('_index.html', 'index.html');
+    this.template('_README.md', 'README.md');
+
+    this.directory('assets/', 'assets/');
   },
 
   projectfiles: function () {
     this.copy('editorconfig', '.editorconfig');
     this.copy('jshintrc', '.jshintrc');
+    this.copy('gitignore', '.gitignore');
+    this.copy('bowerrc', '.bowerrc');
   }
 });
 
