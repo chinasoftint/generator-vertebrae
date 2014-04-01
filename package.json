@@ -1,24 +1,35 @@
 {
-  "name": "backbone-vertabrae",
-  "version": "0.0.1",
+  "name": "generator-vertebrae",
+  "version": "0.0.0",
+  "description": "Yeoman generator",
+  "license": "MIT",
+  "main": "app/index.js",
+  "repository": "conorsheehan/generator-vertebrae",
+  "author": {
+    "name": "",
+    "email": "",
+    "url": "https://github.com/conorsheehan"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "yeoman-generator": "~0.16.0",
+    "chalk": "~0.4.0"
+  },
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-jshint": "0.6.4",
-    "grunt-contrib-handlebars": "0.5.10",
-    "grunt-handlebars-compiler": "0.0.7",
-    "grunt-contrib-jasmine": "~0.5.2",
-    "karma-script-launcher": "~0.1.0",
-    "karma-chrome-launcher": "~0.1.0",
-    "karma-firefox-launcher": "~0.1.0",
-    "karma-html2js-preprocessor": "~0.1.0",
-    "karma-jasmine": "~0.1.3",
-    "karma-requirejs": "~0.1.0",
-    "karma-coffee-preprocessor": "~0.1.0",
-    "karma-phantomjs-launcher": "~0.1.0",
-    "karma": "~0.10.2",
-    "grunt-karma": "~0.6.2",
-    "grunt-contrib-watch": "~0.5.3",
-    "grunt-contrib-sass": "~0.5.0",
-    "grunt-contrib-requirejs": "~0.4.1"
+    "mocha": "*"
+  },
+  "peerDependencies": {
+    "yo": ">=1.0.0"
   }
 }
