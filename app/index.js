@@ -40,6 +40,28 @@ var VertebraeGenerator = yeoman.generators.Base.extend({
       name: 'authorEmail',
       message: 'What is your email address?',
       default: 'spember@gmail.com'
+    }, {
+      type: 'list',
+      name: 'jsLibrary',
+      message: 'Which JS library would you prefer?',
+      choices: ['jQuery', 'Zepto', 'Neither']
+    }, {
+      type: 'checkbox',
+      name: 'features',
+      message: 'What other features would you like to use?',
+      choices: [{
+        name: 'Bootstrap',
+        value: 'includeBootstrap',
+        checked: false
+      },{
+        name: 'Font Awesome',
+        value: 'includeFontAwesome',
+        checked: false
+      },{
+        name: 'Fastclick',
+        value: 'includeFastclick',
+        checked: false
+      }]
     }];
 
     this.prompt(prompts, function (props) {
@@ -47,6 +69,12 @@ var VertebraeGenerator = yeoman.generators.Base.extend({
       this.appDescription = props.appDescription;
       this.authorName = props.authorName;
       this.authorEmail = props.authorEmail;
+      this.jsLibrary = props.jsLibrary;
+
+      function hasFeature(feat) { return props.features.indexOf(feat) !== -1; }
+      this.includeBootstrap = hasFeature('includeBootstrap');
+      this.includeFontAwesome = hasFeature('includeFontAwesome');
+      this.includeFastclick = hasFeature('includeFastclick');
 
       done();
     }.bind(this));
