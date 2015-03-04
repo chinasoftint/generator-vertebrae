@@ -61,3 +61,7 @@ MIT
 [bootstrap]: http://getbootstrap.com/ "Bootstrap"
 [fontawesome]: http://fortawesome.github.io/Font-Awesome/ "Font Awesome"
 [fastclick]: https://github.com/ftlabs/fastclick "Fastclick"
+
+## Omniref
+[Find this project on Omniref](https://www.omniref.com/js/npm/generator-vertebrae/0.1.0)
+
